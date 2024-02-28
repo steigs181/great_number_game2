@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/game_over.css') }}">
+    <title>Game Over</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to the Great Numbers Game!!!</h1>
+            <p>I'm thinking of a number between 1 and 100</p>
+        </div>
+        <div class="main_body">
+            <div class="play_again_box">
+                <h2>Do you want to play again?</h2>
+                <h3>The answer was: {{ answer_int }}</h3>
+                <form action="/game_over_reset" method="post">
+                <input type="submit" value="Restart" name="play_again " id="restart_game" class="play_again_btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
